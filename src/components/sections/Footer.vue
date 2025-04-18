@@ -37,7 +37,7 @@
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    margin: 40px 0 32px;
+    margin: 40px auto 32px;
   }
 
   #footer-upper {
