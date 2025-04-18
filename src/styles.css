@@ -1,0 +1,192 @@
+:root {
+  color-scheme: dark;
+  --color-primary: #7CBD6B;
+  --color-background: #1A1C20;
+  --color-text-dark: #1A1C20;
+  --content-width: 1280px;
+  --header-height: 112px;
+  --box-shadow: 0 2px 6px 2px #0004;
+  --box-shadow-active: 0 0 6px 2px #0004;
+  --font: Nunito, Arial, serif;
+  --font-heading: "Rouge Script", Arial, serif;
+  --transparency: url("data:image/webp;base64,UklGRiYAAABXRUJQVlA4TBkAAAAvD8ADAAWRto2Te5h/fYXnEf2fgDj+cfwDAA==");
+  scroll-padding-top: calc(var(--header-height) + 40px);
+}
+
+* {
+  font-family: var(--font);
+  line-height: normal;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html {
+  min-height: 100%;
+  display: flex;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: var(--color-background);
+}
+
+.container {
+  margin: 40px auto 60px;
+  max-width: var(--content-width);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 40px;
+
+  &.row {
+    flex-direction: row;
+  }
+}
+
+section.container + section.container {
+  margin-top: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.icon {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+h1, h1 * {
+  font-size: 56px;
+}
+
+h2, h2 * {
+  font-size: 40px;
+}
+
+button, .button {
+  all: unset;
+  background-color: var(--color-primary);
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  border-radius: 12px;
+  padding: 12px 32px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  user-select: none;
+  cursor: pointer;
+  line-height: 1;
+  text-shadow: none;
+  transition: box-shadow .15s ease, transform .15s ease;
+  max-width: min(100%, 256px);
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: var(--box-shadow);
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: var(--box-shadow-active);
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  &.white {
+    background-color: #fff;
+    color: var(--color-text-dark);
+  }
+
+  &.secondary {
+    background-color: initial;
+    border: 2px solid var(--color-primary);
+    color: #fff;
+
+    &.white {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+  }
+}
+
+.mobile {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: flex !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  .container {
+    margin: 30px auto 40px;
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  * {
+    font-size: 14px;
+  }
+
+  h1, h1 * {
+    font-size: 40px;
+  }
+
+  h2, h2 * {
+    font-size: 32px;
+  }
+
+  button, .button {
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 24px;
+    gap: 8px;
+
+    .icon {
+      font-size: 18px;
+    }
+  }
+}
