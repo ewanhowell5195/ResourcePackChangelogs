@@ -1,7 +1,6 @@
 <script setup>
   import Header from "./components/sections/Header.vue"
   import Footer from "./components/sections/Footer.vue"
-  import PopupViewer from "./components/sections/PopupViewer.vue"
 </script>
 
 <template>
@@ -10,7 +9,6 @@
     <router-view />
   </div>
   <Footer />
-  <PopupViewer />
 </template>
 
 <style>
