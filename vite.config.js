@@ -34,7 +34,7 @@ export default defineConfig({
 })
 
 function loadVueFile(filePath) {
-  const match = fs.readFileSync(filePath, "utf-8").match(/export default\s*({[\s\S]*?})/)
+  const match = fs.readFileSync(filePath, "utf-8").match(/(?<=<script>\s*)export default\s*({[\s\S]*?})(?=\s*<\/script>)/)
   if (!match) {
     return {}
   }
