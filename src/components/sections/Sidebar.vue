@@ -26,7 +26,7 @@
     position: fixed;
     inset: 0;
     background-color: #0008;
-    z-index: 1;
+    z-index: 2;
     opacity: 0;
     pointer-events: none;
     transition: opacity .25s ease;
@@ -45,7 +45,7 @@
     bottom: 0;
     background-color: var(--color-primary);
     width: 256px;
-    z-index: 2;
+    z-index: 3;
     transform: translateX(-100%);
     transition: transform .25s ease, background-color .25s ease;
     display: flex;
