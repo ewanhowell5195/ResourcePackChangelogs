@@ -13,10 +13,8 @@
 <template>
   <div id="sidebar" :class="{ open: modelValue }">
     <router-link to="/" @click="closeSidebar">Home</router-link>
-    <router-link to="/services/hairdressing" @click="closeSidebar">Hairdressing</router-link>
-    <router-link to="/services/bridalhair" @click="closeSidebar">Bridal Hair</router-link>
-    <router-link to="/about" @click="closeSidebar">About</router-link>
-    <router-link to="/contact" @click="closeSidebar">Contact</router-link>
+    <router-link to="/changelogs/latest" @click="closeSidebar">Latest</router-link>
+    <router-link to="/changelogs" @click="closeSidebar">Changelogs</router-link>
   </div>
   <div id="sidebar-content-overlay" :class="{ visible: modelValue }" @click="closeSidebar"></div>
 </template>
