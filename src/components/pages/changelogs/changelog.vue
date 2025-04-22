@@ -76,7 +76,7 @@
     </h1>
     <div class="links">
       <a class="button" :href="changelog.changelog ?? `https://www.minecraft.net/en-us/article/minecraft-snapshot-${changelog.to}`" target="_blank">Official changelog</a>
-      <a class="button" :href="changelog.changelog ?? `https://cccode.pages.dev/version-diff/?${changelog.from},${changelog.to}`" target="_blank">Asset comparison</a>
+      <a class="button" :href="`https://cccode.pages.dev/version-diff/?${changelog.from},${changelog.to}`" target="_blank">Asset comparison</a>
     </div>
     <div class="pack-format">Pack format: {{ changelog.format }}</div>
     <div class="markdown" v-html="renderedMarkdown" />
