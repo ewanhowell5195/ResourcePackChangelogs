@@ -58,9 +58,17 @@
   }
 
   @media (max-width: 768px) {
+    section {
+      height: initial;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
     :deep(.banner-title) {
       font-family: var(--font-heading) !important;
-      font-size: 64px;
+      font-size: 48px;
     }
 
     :deep(p) {
