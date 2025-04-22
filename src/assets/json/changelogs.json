@@ -23,11 +23,5 @@
     "from": "1.21.4",
     "format": 55,
     "changelog": "https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-5"
-  },
-  {
-    "type": "minor",
-    "to": "1.21.5-pre3",
-    "from": "1.21.5-pre1",
-    "format": 55
   }
 ]

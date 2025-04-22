@@ -116,11 +116,25 @@
     }
   }
 
-  .markdown :deep(*) {
-    code {
+  .markdown {
+    &:deep(h2):not(:first-child),
+    &:deep(h3):not(:first-child) {
+      margin: 16px 0;
+    }
+
+    &:deep(code) {
       font-family: monospace;
       background-color: #000;
       padding: 0 3px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .markdown {
+      &:deep(h2):not(:first-child),
+      &:deep(h3):not(:first-child) {
+        margin: 14px 0;
+      }
     }
   }
 </style>
