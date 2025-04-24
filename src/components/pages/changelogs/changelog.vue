@@ -66,7 +66,6 @@
   watch(() => route.params.slug, updateContent)
 </script>
 
-
 <template>
   <section v-if="changelog" class="container">
     <h1 class="changelog-version">

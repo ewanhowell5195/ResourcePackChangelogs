@@ -23,5 +23,79 @@
     "from": "1.21.4",
     "format": 55,
     "changelog": "https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-5"
+  },
+  {
+    "type": "minor",
+    "to": "1.21.5-pre3",
+    "from": "1.21.5-pre1",
+    "format": 55,
+    "changelog": "https://www.minecraft.net/en-us/article/minecraft-1-21-5-pre-release-3"
+  },
+  {
+    "type": "minor",
+    "to": "1.21.5-pre1",
+    "from": "25w10a",
+    "format": 55,
+    "changelog": "https://www.minecraft.net/en-us/article/minecraft-1-21-5-pre-release-1"
+  },
+  {
+    "type": "minor",
+    "to": "25w10a",
+    "from": "25w09a",
+    "format": 54
+  },
+  {
+    "type": "minor",
+    "to": "25w09a",
+    "from": "25w08a",
+    "format": 53
+  },
+  {
+    "type": "minor",
+    "to": "25w08a",
+    "from": "25w07a",
+    "format": 53
+  },
+  {
+    "type": "minor",
+    "to": "25w07a",
+    "from": "25w06a",
+    "format": 52
+  },
+  {
+    "type": "minor",
+    "to": "25w06a",
+    "from": "25w05a",
+    "format": 51
+  },
+  {
+    "type": "minor",
+    "to": "25w05a",
+    "from": "25w04a",
+    "format": 50
+  },
+  {
+    "type": "minor",
+    "to": "25w04a",
+    "from": "25w03a",
+    "format": 49
+  },
+  {
+    "type": "minor",
+    "to": "25w03a",
+    "from": "25w02a",
+    "format": 48
+  },
+  {
+    "type": "minor",
+    "to": "25w02a",
+    "from": "1.21.4",
+    "format": 47
+  },
+  {
+    "type": "minor",
+    "to": "25w02a",
+    "from": "1.21.4",
+    "format": 47
   }
 ]
