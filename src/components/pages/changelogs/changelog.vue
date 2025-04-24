@@ -47,8 +47,8 @@
       }
     }
 
-    for (let i = index + 1; i < changelogs.length; i++) {
-      if (changelogs[i].type === changelog.value.type) {
+    for (let i = index + 2; i < changelogs.length; i++) {
+      if (changelogs[i].type === changelog.value.type && changelogs[i] !== changelog.value) {
         prev.value = changelogs[i]
         break
       }
@@ -60,6 +60,8 @@
     }
 
     renderedMarkdown.value = md.render(content)
+
+    console.log(prev.value)
   }
 
   onMounted(updateContent)

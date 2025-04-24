@@ -30,7 +30,6 @@
   .changelogs {
     display: flex;
     gap: 32px;
-    flex-wrap: wrap;
   }
 
   .changelog {
@@ -41,6 +40,7 @@
     display: flex;
     gap: 8px;
     flex-direction: column;
+    width: calc(50% - 32px / 2);
   }
 
   .changelog-heading {
@@ -70,5 +70,30 @@
   .changelog:last-child {
     background-color: initial;
     border: 2px solid var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .changelogs {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .changelog {
+      padding: 16px !important;
+      width: 100%;
+    }
+
+    .changelog-heading {
+      margin-bottom: 0;
+    }
+
+    .changelog-version {
+      gap: 6px;
+      margin-bottom: 8px;
+
+      & span {
+        font-size: 32px;
+      }
+    }
   }
 </style>

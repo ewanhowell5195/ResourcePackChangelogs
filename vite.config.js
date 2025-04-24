@@ -19,6 +19,18 @@ export default defineConfig({
   plugins: [
     vue(),
     {
+      name: "watch-public",
+      apply: "serve",
+      configureServer(server) {
+        fs.watch(path.resolve(__dirname, "public"), { recursive: true }, () => {
+          server.ws.send({
+            type: "full-reload",
+            path: "/"
+          })
+        })
+      }
+    },
+    {
       name: "build-finished-hook",
       async closeBundle() {
         console.log("Build finished. Running custom post-build function...")

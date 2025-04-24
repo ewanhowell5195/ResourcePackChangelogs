@@ -8,15 +8,17 @@
     <div class="changelogs-container">
       <div v-for="type in ['major', 'minor']" :key="type" class="changelogs" :class="type">
         <div class="changelog-heading">{{ type }} updates</div>
-        <div v-for="changelog in changelogs.filter(c => c.type === type)" :key="`${changelog.from}-${changelog.to}`" class="changelog">
+        <div v-for="(changelog, index) in changelogs.filter(c => c.type === type)" :key="`${changelog.from}-${changelog.to}`" class="changelog">
           <div class="changelog-version">
             <span>{{ changelog.from }}</span>
             <span class="icon">arrow_forward</span>
             <span>{{ changelog.to }}</span>
           </div>
           <router-link :class="['button', type === 'major' ? 'white' : '']" :to="`/changelogs/${changelog.from}_${changelog.to}`">View changelog</router-link>
-          <a :class="['button', 'secondary', type === 'major' ? 'white' : '']" :href="changelog.changelog ?? `https://www.minecraft.net/en-us/article/minecraft-snapshot-${changelog.to}`" target="_blank">Official changelog</a>
-          <a :class="['button', 'secondary', type === 'major' ? 'white' : '']" :href="changelog.changelog ?? `https://cccode.pages.dev/version-diff/?${changelog.from},${changelog.to}`" target="_blank">Asset comparison</a>
+          <template v-if="index === 0">
+            <a :class="['button', 'secondary', type === 'major' ? 'white' : '']" :href="changelog.changelog ?? `https://www.minecraft.net/en-us/article/minecraft-snapshot-${changelog.to}`" target="_blank">Official changelog</a>
+            <a :class="['button', 'secondary', type === 'major' ? 'white' : '']" :href="changelog.changelog ?? `https://cccode.pages.dev/version-diff/?${changelog.from},${changelog.to}`" target="_blank">Asset comparison</a>
+          </template>
         </div>
       </div>
     </div>
@@ -34,7 +36,7 @@
     display: flex;
     gap: 32px;
     flex-direction: column;
-    flex: 1 1 0px;
+    width: calc(50% - 32px / 2);
   }
 
   .changelog {
@@ -45,6 +47,18 @@
     display: flex;
     gap: 8px;
     flex-direction: column;
+
+    &:not(:nth-child(2)) {
+      padding: 24px 32px;
+
+      .changelog-version {
+        margin-bottom: 10px;
+
+        & span {
+          font-size: 32px;
+        }
+      }
+    }
   }
 
   .changelog-heading {
@@ -76,5 +90,42 @@
   .changelogs.minor .changelog {
     background-color: initial;
     border: 2px solid var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .changelogs-container {
+      flex-direction: column;
+    }
+
+    .changelogs {
+      width: 100%;
+      gap: 16px;
+    }
+
+    .changelog {
+      padding: 16px !important;
+
+      &:not(:nth-child(2)) .changelog-version {
+        margin-bottom: 6px;
+
+        & span {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .changelog-heading {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+
+    .changelog-version {
+      gap: 6px;
+      margin-bottom: 8px;
+
+      & span {
+        font-size: 32px;
+      }
+    }
   }
 </style>
