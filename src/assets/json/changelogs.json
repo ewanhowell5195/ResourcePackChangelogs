@@ -1,6 +1,18 @@
 [
   {
     "type": "minor",
+    "to": "25w21a",
+    "from": "25w20a",
+    "format": 62
+  },
+  {
+    "type": "minor",
+    "to": "25w20a",
+    "from": "25w19a",
+    "format": 61
+  },
+  {
+    "type": "minor",
     "to": "25w19a",
     "from": "25w18a",
     "format": 60
