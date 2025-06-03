@@ -1,6 +1,12 @@
 [
   {
     "type": "minor",
+    "to": "1.21.6-pre1",
+    "from": "25w21a",
+    "format": 63
+  },
+  {
+    "type": "minor",
     "to": "25w21a",
     "from": "25w20a",
     "format": 62
