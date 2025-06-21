@@ -1,5 +1,12 @@
 [
   {
+    "type": "major",
+    "to": "1.21.6",
+    "from": "1.21.5",
+    "format": 63,
+    "changelog": "https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-6"
+  },
+  {
     "type": "minor",
     "to": "1.21.6-pre1",
     "from": "25w21a",
