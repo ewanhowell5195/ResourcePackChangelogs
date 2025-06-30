@@ -1,22 +1,22 @@
 [
   {
     "type": "major",
-    "to": "1.21.6",
-    "from": "1.21.7",
+    "to": "1.21.7",
+    "from": "1.21.6",
     "format": 64,
     "changelog": "https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-7"
   },
   {
     "type": "minor",
-    "to": "1.21.7-rc1",
-    "from": "1.21.7-rc2",
+    "to": "1.21.7-rc2",
+    "from": "1.21.7-rc1",
     "format": 64,
     "changelog": "https://www.minecraft.net/en-us/article/minecraft-1-21-7-release-candidate-2"
   },
   {
     "type": "minor",
-    "to": "1.21.6",
-    "from": "1.21.7-rc1",
+    "to": "1.21.7-rc1",
+    "from": "1.21.6",
     "format": 63,
     "changelog": "https://www.minecraft.net/en-us/article/minecraft-1-21-7-release-candidate-1"
   },
