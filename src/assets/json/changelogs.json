@@ -1,5 +1,11 @@
 [
   {
+    "type": "minor",
+    "to": "25w32a",
+    "from": "25w31a",
+    "format": 65.1
+  },
+  {
     "type": "major",
     "to": "1.21.7",
     "from": "1.21.6",
