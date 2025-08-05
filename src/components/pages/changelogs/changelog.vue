@@ -47,7 +47,7 @@
       }
     }
 
-    for (let i = index + 2; i < changelogs.length; i++) {
+    for (let i = index + 1; i < changelogs.length; i++) {
       if (changelogs[i].type === changelog.value.type && changelogs[i] !== changelog.value) {
         prev.value = changelogs[i]
         break
@@ -60,8 +60,6 @@
     }
 
     renderedMarkdown.value = md.render(content)
-
-    console.log(prev.value)
   }
 
   onMounted(updateContent)
@@ -79,7 +77,7 @@
       <a class="button" :href="changelog.changelog ?? `https://www.minecraft.net/en-us/article/minecraft-snapshot-${changelog.to}`" target="_blank">Official changelog</a>
       <a class="button" :href="`https://cccode.pages.dev/version-diff/?${changelog.from},${changelog.to}`" target="_blank">Asset comparison</a>
     </div>
-    <div class="pack-format">Pack format: {{ changelog.format }}</div>
+    <div class="pack-format">Pack format: {{ changelog.format >= 65 ? changelog.format.toFixed(1) : changelog.format }}</div>
     <div class="markdown" v-html="renderedMarkdown" />
     <div class="links">
       <router-link v-if="prev" class="button secondary" :to="`/changelogs/${prev.from}_${prev.to}`">
@@ -119,21 +117,35 @@
 
   .markdown {
     &:deep(h2):not(:first-child),
-    &:deep(h3):not(:first-child) {
+    &:deep(h3):not(:first-child),
+    &:deep(h4):not(:first-child) {
       margin: 16px 0;
     }
 
-    &:deep(code) {
+    &:deep(code),
+    &:deep(pre) {
       font-family: monospace;
-      background-color: #000;
+      background-color: #0006;
       padding: 0 3px;
+    }
+
+    &:deep(pre) {
+      padding: 8px;
+      white-space: pre-wrap;
+      line-height: 1.25;
+
+      code {
+        line-height: 1.25;
+        background-color: initial;
+      }
     }
   }
 
   @media (max-width: 768px) {
     .markdown {
       &:deep(h2):not(:first-child),
-      &:deep(h3):not(:first-child) {
+      &:deep(h3):not(:first-child),
+      &:deep(h4):not(:first-child) {
         margin: 14px 0;
       }
     }

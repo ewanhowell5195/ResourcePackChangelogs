@@ -13,7 +13,7 @@
 
 * {
   font-family: var(--font);
-  line-height: normal;
+  line-height: 1.5;
   box-sizing: border-box;
   font-size: 16px;
 }
@@ -100,6 +100,10 @@ h3, h3 * {
   font-size: 28px;
 }
 
+h4, h4 * {
+  font-size: 24px;
+}
+
 button, .button {
   all: unset;
   background-color: var(--color-primary);
@@ -183,6 +187,10 @@ button, .button {
 
   h3, h3 * {
     font-size: 24px;
+  }
+
+  h4, h4 * {
+    font-size: 20px;
   }
 
   button, .button {
