@@ -1,27 +1,34 @@
 [
   {
+    "type": "major",
+    "to": "1.21.9",
+    "from": "1.21.8",
+    "format": 69,
+    "changelog": "https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-9"
+  },
+  {
     "type": "minor",
     "to": "25w37a",
     "from": "25w36b",
-    "format": 69.0
+    "format": 69
   },
   {
     "type": "minor",
     "to": "25w36a",
     "from": "25w35a",
-    "format": 68.0
+    "format": 68
   },
   {
     "type": "minor",
     "to": "25w35a",
     "from": "25w34b",
-    "format": 67.0
+    "format": 67
   },
   {
     "type": "minor",
     "to": "25w34a",
     "from": "25w33a",
-    "format": 66.0
+    "format": 66
   },
   {
     "type": "minor",
