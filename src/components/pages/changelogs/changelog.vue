@@ -139,6 +139,10 @@
         background-color: initial;
       }
     }
+
+    &:deep p {
+      margin: 1em 0;
+    }
   }
 
   @media (max-width: 768px) {
