@@ -118,14 +118,6 @@
   header.scrolled {
     background-color: var(--color-primary);
 
-    * {
-      color: #fff;
-    }
-
-    & a::before {
-      background-color: #fff;
-    }
-
     #header-logo-link img {
       opacity: 0;
     }
@@ -149,7 +141,7 @@
         position: absolute;
         bottom: 2px;
         height: 2px;
-        background-color: #000;
+        background-color: #fff;
         left: 50%;
         transform: translateX(-50%);
         width: 0;
