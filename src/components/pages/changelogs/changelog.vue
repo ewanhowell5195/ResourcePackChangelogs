@@ -140,8 +140,14 @@
       }
     }
 
-    &:deep p {
+    &:deep(p) {
       margin: 1em 0;
+    }
+
+    &:deep(h2 + p),
+    &:deep(h3 + p),
+    &:deep(h4 + p) {
+      margin-top: 0;
     }
   }
 
