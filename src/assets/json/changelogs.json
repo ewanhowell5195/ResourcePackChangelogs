@@ -1,9 +1,27 @@
 [
   {
     "type": "minor",
-    "to": "25w42a",
-    "from": "25w41a",
-    "format": 70.1
+    "to": "25w46a",
+    "from": "25w45a",
+    "format": 74.0
+  },
+  {
+    "type": "minor",
+    "to": "25w45a",
+    "from": "25w44a",
+    "format": 73.0
+  },
+  {
+    "type": "minor",
+    "to": "25w44a",
+    "from": "25w43a",
+    "format": 72.0
+  },
+  {
+    "type": "minor",
+    "to": "25w43a",
+    "from": "25w42a",
+    "format": 71.0
   },
   {
     "type": "minor",
